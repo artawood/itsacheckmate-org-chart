@@ -1,6 +1,6 @@
 import React from "react";
 import { TreeNode } from "react-organizational-chart";
-import { Card } from "react-bootstrap";
+import { Accordion, Card } from "react-bootstrap";
 import styled from "styled-components";
 
 const StyledNode = styled.div`

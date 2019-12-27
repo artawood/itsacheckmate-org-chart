@@ -1,6 +1,11 @@
 const team = {
   ceo: { title: "CEO/Founder", name: "Vishal Agarwal" },
   departments: {
+    administration: {
+      dept_name: "Administration / HR",
+      manager: { title: "", name: "" },
+      team_members: [{ title: "Executive Assistant / HR", name: "Carrie Hart" }]
+    },
     brand_marketing: {
       dept_name: "Brand + Marketing",
       manager: { title: "", name: "" },
@@ -22,8 +27,8 @@ const team = {
     technology_engineering: {
       dept_name: "Technology/Engineering",
       manager: { title: "Chief Technology Officer", name: "Luke Ivers" },
-      divisions: [
-        {
+      divisions: {
+        customer_support: {
           div_name: "Customer Support",
           lead: { title: "Head of Support", name: "Jason Kauffman" },
           sub_divisions: [],
@@ -34,11 +39,11 @@ const team = {
             { title: "Operations Specialist", name: "Jared McCune" }
           ]
         },
-        {
+        engineering: {
           div_name: "Engineering",
           lead: { title: "", name: "" },
-          sub_divisions: [
-            {
+          sub_divisions: {
+            operations: {
               name: "Ops",
               lead: { title: "Head of Engineering Ops", name: "Eric Wagner" },
               team: [
@@ -57,10 +62,16 @@ const team = {
                     { title: "Tech Support", name: "Jeremy Benoist" }
                   ]
                 }
-              ]
+              ],
+              team_members: []
             },
-            { name: "DevOps", lead: { title: "Engineer", name: "Ben Cohen" } },
-            {
+            devOps: {
+              name: "DevOps",
+              lead: { title: "Engineer", name: "Ben Cohen" },
+              team: [],
+              team_members: []
+            },
+            integrations: {
               name: "Integrations",
               lead: { title: "Head of Integrations", name: "Amit Solanki" },
               team_members: [
@@ -69,10 +80,10 @@ const team = {
                 { title: "Engineer", name: "Shruti Satsangi" }
               ]
             },
-            { name: "QA/QA Ops", lead: { title: "QA/QA Ops", name: "Ben Stinnett" }, team: [] }
-          ]
+            qa: { name: "QA/QA Ops", lead: { title: "QA/QA Ops", name: "Ben Stinnett" }, team: [] }
+          }
         },
-        {
+        pre_go_live: {
           div_name: "Pre Go-LIVE",
           lead: { title: "Account Manager", name: "Brett Jones" },
           sub_divisions: [
@@ -112,7 +123,7 @@ const team = {
             { title: "Operations Specialist", name: "Jared McCune" }
           ]
         }
-      ]
+      }
     },
     special_projects: {
       dept_name: "Special Projects",
